@@ -3,7 +3,7 @@ Assignment 3 – Practical Question 1
 How arithmetic operators and concatenation work in the browser
 
 Explanation:
-Arithmetic operators are used to perform mathematical operations on numbers. Common operators include:
+Arithmetic operators are bening used to perform mathematical operations on numbers. Common operators include:
 + → addition
 - → subtraction
 * → multiplication
