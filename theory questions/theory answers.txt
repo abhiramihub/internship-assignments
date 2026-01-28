@@ -57,7 +57,7 @@ efficiently.
 
 5) Define CDN
 
-CDN stands for Content Delivery Network. It is a system of distributed servers located in different
+CDN nothing but stands for Content Delivery Network. It is a system of distributed servers located in different
 geographical locations around the world. The main purpose of a CDN is to deliver website content faster
 and more efficiently to users.
 When a user requests a webpage, the CDN delivers the content from the nearest server instead of the
