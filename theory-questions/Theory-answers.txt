@@ -1,0 +1,137 @@
+Theory Assignment – 1
+
+1) Difference between HTTP and HTTPS
+
+HTTP stands for HyperText Transfer Protocol. It is a protocol used for communication between a web browser
+and a web server. In HTTP, the data is transferred in plain text, which means anyone who intercepts the
+communication can read or modify the data. Because of this, HTTP is not secure and is not recommended
+for websites that handle sensitive information such as login credentials or payment details.
+
+HTTPS stands for HyperText Transfer Protocol Secure. It is the secure version of HTTP and uses SSL/TLS
+encryption to protect data during transmission. In HTTPS, the information exchanged between the browser
+and the server is encrypted, ensuring confidentiality, data integrity, and authentication. HTTPS also
+helps in building user trust and improves website ranking in search engines.
+
+In summary, HTTP is fast but insecure, whereas HTTPS provides secure and reliable communication over
+the web.
+
+2) Define Web Architecture
+
+Web architecture refers to the overall structure and design of a web application. It explains how
+different components such as the client, server, database, and network interact with each other to
+deliver content and services to users. A well-designed web architecture ensures better scalability,
+performance, security, and easy maintenance of the application.
+In a typical web architecture, the client is usually a web browser that sends requests to the server.
+The server processes these requests, communicates with the database when required, and then sends
+responses back to the client. Modern web applications often follow multi-tier architecture, such as
+three-tier architecture, which includes presentation layer, application layer, and data layer.
+Web architecture plays an important role in building efficient, reliable, and scalable web systems.
+
+
+3) Difference between ARIA and WAI-ARIA
+
+ARIA stands for Accessible Rich Internet Applications. It is a set of attributes that can be added to
+HTML elements to improve accessibility, especially for dynamic content and interactive components such
+as buttons, forms, menus, and dialog boxes.
+
+WAI-ARIA stands for Web Accessibility Initiative – Accessible Rich Internet Applications. It is the
+official specification developed by the World Wide Web Consortium (W3C) under the Web Accessibility
+Initiative. WAI-ARIA defines the rules, roles, states, and properties that developers should follow to
+make web content accessible to people with disabilities.
+In simple terms, ARIA refers to the accessibility features used in web development, while WAI-ARIA
+provides the official guidelines and standards for implementing ARIA correctly.
+
+
+4) Behind the Screen – How the Web Works
+
+When a user types a website URL in a browser and presses Enter, several processes take place behind the
+screen. First, the browser contacts the Domain Name System (DNS) server to convert the domain name into
+an IP address. Once the IP address is obtained, the browser sends an HTTP or HTTPS request to the web
+server.
+The web server receives the request, processes it, and sends back the required files such as HTML, CSS,
+and JavaScript. The browser then interprets these files, creates the DOM tree, applies styles, executes
+scripts, and finally displays the webpage on the screen.
+This entire process happens within a few seconds and allows users to access websites smoothly and
+efficiently.
+
+
+5) Define CDN
+
+CDN stands for Content Delivery Network. It is a system of distributed servers located in different
+geographical locations around the world. The main purpose of a CDN is to deliver website content faster
+and more efficiently to users.
+When a user requests a webpage, the CDN delivers the content from the nearest server instead of the
+original server. This reduces loading time, improves website performance, and reduces traffic load on
+the main server. CDNs are commonly used to deliver images, videos, stylesheets, and JavaScript files.
+
+
+6) Define DNS
+
+DNS stands for Domain Name System. It is a core system of the internet that converts human-readable
+domain names into IP addresses. Since computers use IP addresses to identify each other, DNS helps
+users access websites easily without remembering numeric addresses.
+DNS works like a phone directory for the internet. When a domain name is entered in the browser, DNS
+servers find the corresponding IP address and connect the browser to the correct web server. Without
+DNS, accessing websites would be difficult and time-consuming.
+
+
+7) Explain what is the smallest JavaScript file which you can execute in web.
+JavaScript is a lightweight, interpreted programming language that runs directly in the web browser. 
+To execute JavaScript on theweb, only a very small amount of code is required, which shows how flexible 
+and easy it is to use for web development. In fact, the smallest JavaScript file that can be executed in
+a browser can contain just a single valid statement. This could be something as simple as a console log statement,
+an alert, or even a single variable declaration.
+A JavaScript file does not require any special structure, classes, or functions to run. As long as the file contains valid 
+JavaScript syntax and is properly linked to an HTML page using the <script> tag, the browser will execute it. For example,
+even a file with only one line of code like console.log("Hello World"); or var x = 10; is enough to be considered executable.
+This demonstrates the simplicity of JavaScript and why it is widely used for adding interactivity and small functionality
+ to web pages.
+Even minimal JavaScript files can perform meaningful tasks. The browser reads the code, interprets it, and executes it
+immediately, allowing developers to test small functions or debug larger applications in small increments. The ability to
+run small files independently also helps beginners learn programming concepts easily, without the need for complex setups
+or frameworks.
+In conclusion, the smallest JavaScript file that can be executed on the web is one that contains at least one valid JavaScript 
+statement. It must be properly linked to an HTML page for the browser to interpret and execute it. This minimal requirement
+ highlights the efficiency and flexibility of JavaScript, making it an essential language for web development.
+For example, a valid minimal JavaScript file could be:
+
+console.log("Hello World");
+
+8)Complete DOM Manipulation
+
+The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree
+of objects, where each element, attribute, and text node is an oject that can be accessed and manipulated using JavaScript.
+DOM manipulation allows developers to change the content, structure, and style of a webpage dynamically, without reloading
+the page.
+Using DOM manipulation, we can perform a variety of actions on a webpage. For example, we can access elements using methods like
+getElementById(), getElementsByClassName(), getElementsByTagName(), and querySelector(). Once an element is accessed, we can
+modify its content using innerHTML or textContent, change its attributes with setAttribute(), update styles using the style
+property, and even add or remove elements from the page using methods like appendChild(), removeChild(), and replaceChild().
+DOM manipulation also allows us to handle events, such as clicks, mouse movements, or keyboard inputs. Event listeners can be
+added to elements using addEventListener(), which executes a function when a specific event occurs. This enables interactivity
+on the webpage, such as form validation, dropdown menus, sliders, or dynamic content updates.In summary, complete DOM
+manipulation involves accessing elements, modifying their content and attributes, updating styles, creating or removing elements
+and handling events. Mastering DOM manipulation is essential for creating dynamic, interactive, and user-friendly web 
+applications.
+
+9)explore npm and npx
+
+NPM stands for Node Package Manager and is a tool that comes with Node.js. It is used to manage and install packages or libraries
+that can be used in JavaScript projects. With npm, developers can easily download, update, and maintain reusable code modules 
+rom the npm registry, which contains thousands of open-source packages. For example, if a project needs a library like
+Express.js, it can be installed using the npm command npm install express. NPM also allows developers to manage project 
+dependencies, specify package versions, and create scripts to automate tasks.
+
+NPX stands for Node Package Execute and is a companion tool that comes with npm version 5.2 and above. It is used to run
+packages without installing them globally. This is particularly useful for running command-line tools or one-time scripts
+directly from the npm registry. For example, instead of installing a package globally to use it once, you can run npx
+create-react-app myapp to create a new React application without permanently installing the create-react-app package on your 
+system.
+In summary, npm is primarily used to install, manage, and maintain packages, while npx is used to execute packages
+directly without global installation. Both tools are essential for modern JavaScript development and help developers
+work efficiently by reusing code and managing dependencies
+
+
+
+
+
