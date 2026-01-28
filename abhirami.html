@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhirami S | Portfolio</title>
+
+<style>
+:root {
+    --bg: #eef2f5;
+    --card: #ffffff;
+    --text: #333;
+    --primary: #2575fc;
+    --accent: #6a11cb;
+}
+
+body.dark {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #f1f1f1;
+    --primary: #4dabf7;
+    --accent: #8a2be2;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-card {
+    max-width: 1200px;
+    margin: 60px auto;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(120deg, var(--accent), var(--primary));
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.header img:hover {
+    transform: scale(1.1);
+}
+
+.header h1 {
+    margin: 15px 0 5px;
+    font-size: 28px;
+}
+
+.header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* HORIZONTAL SECTIONS */
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 30px;
+    gap: 20px;
+}
+
+.section {
+    flex: 1 1 30%;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.section h2 {
+    border-left: 5px solid var(--primary);
+    padding-left: 10px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* ABOUT ME */
+.section.about p {
+    line-height: 1.7;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.skills span:hover {
+    transform: translateY(-3px);
+    background: var(--accent);
+}
+
+/* HOBBIES */
+.section.hobbies ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* CERTIFICATES */
+.certificates a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 8px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+body.dark .certificates a {
+    background: rgba(255,255,255,0.08);
+}
+
+.certificates a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background: rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+body.dark .footer {
+    background: rgba(255,255,255,0.05);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+    .section {
+        flex: 1 1 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sections {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .section {
+        flex: 1 1 100%;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleMode()">🌙 Dark Mode</button>
+
+<div class="profile-card">
+
+    <div class="header">
+        <img src="profile.jpg" alt="Profile Photo">
+        <h1>Abhirami S.</h1>
+        <p>Diploma Student | Aspiring Web Developer</p>
+    </div>
+
+    <div class="sections">
+
+        <!-- ABOUT ME -->
+        <div class="section about">
+            <h2>About Me</h2>
+            <p>
+                I am Abhirami S., currently pursuing a Diploma in Computer Science & Engineering.
+                I am passionate about web development and enjoy creating clean, modern, and user-friendly websites using HTML, CSS, and JavaScript.
+                I constantly explore new technologies and best practices to enhance my skills and deliver professional projects.
+                In my free time, I also enjoy contributing to small web projects and learning from the developer community.
+            </p>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section education">
+            <h2>Education</h2>
+            <ul>
+                <li>10th & 12th – Kerala Board</li>
+                <li>Diploma – Computer Science & Engineering (Pursuing)</li>
+            </ul>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section skills-section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Git & GitHub</span>
+                <span>Problem Solving</span>
+                <span>Communication</span>
+                <span>UI/UX Design</span>
+            </div>
+        </div>
+
+        <!-- HOBBIES -->
+        <div class="section hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Learning new web technologies</li>
+                <li>Designing small websites</li>
+                <li>Listening to music</li>
+                <li>Reading tech articles</li>
+            </ul>
+        </div>
+
+        <!-- CERTIFICATES -->
+        <div class="section certificates">
+            <h2>Certificates</h2>
+            <a href="https://lnkd.in/dAAdJ2er" target="_blank">
+                📜 HTML & CSS Basics – Certificate
+            </a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="section contact">
+            <h2>Contact</h2>
+            <p><b>Email:</b> abhisanal50@gmail.com</p>
+            <p><b>Phone:</b> 6282161549</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Abhirami S | Portfolio
+    </div>
+
+</div>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark");
+    const btn = document.querySelector(".toggle");
+    btn.textContent = document.body.classList.contains("dark")
+        ? "🌞 Light Mode"
+        : "🌙 Dark Mode";
+}
+</script>
+
+</body>
+</html>
