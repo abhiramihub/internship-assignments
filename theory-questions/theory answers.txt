@@ -130,8 +130,3 @@ system.
 In summary, npm is primarily used to install, manage, and maintain packages, while npx is used to execute packages
 directly without global installation. Both tools are essential for modern JavaScript development and help developers
 work efficiently by reusing code and managing dependencies
-
-
-
-
-
