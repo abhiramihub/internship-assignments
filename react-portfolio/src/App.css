@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* APP */
+.app {
+  text-align: center;
+  background: #f5f7fb;
+  color: #333;
+  transition: all 0.3s;
+}
+
+/* DARK MODE */
+.app.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+/* DARK MODE CARDS */
+.app.dark .card {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.05);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #ffd86b;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  text-decoration: none;
+  background: white;
+  color: #764ba2;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffd86b;
+  color: #000;
+}
+
+/* SECTIONS */
+.section {
+  padding: 70px 20px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* PROJECT CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* LINKS */
+a {
+  color: #667eea;
+  margin-left: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.app.dark a {
+  color: #ffd86b;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.app.dark .footer {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* DARK MODE TOGGLE BUTTON */
+.dark-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.dark-toggle:hover {
+  background: #764ba2;
+}
