@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/internship-assignments/react-portfolio/static/css/main.dadb4ab0.css",
+    "main.js": "/internship-assignments/react-portfolio/static/js/main.ef047cf2.js",
+    "static/js/453.fe5984aa.chunk.js": "/internship-assignments/react-portfolio/static/js/453.fe5984aa.chunk.js",
+    "index.html": "/internship-assignments/react-portfolio/index.html",
+    "main.dadb4ab0.css.map": "/internship-assignments/react-portfolio/static/css/main.dadb4ab0.css.map",
+    "main.ef047cf2.js.map": "/internship-assignments/react-portfolio/static/js/main.ef047cf2.js.map",
+    "453.fe5984aa.chunk.js.map": "/internship-assignments/react-portfolio/static/js/453.fe5984aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dadb4ab0.css",
+    "static/js/main.ef047cf2.js"
+  ]
+}
