@@ -1,0 +1,1082 @@
+How the Backend of a Screen Works
+
+When you open a screen in any website or web application, what you see is only the frontend. The frontend is responsible for layout, design, and user interaction. However, all real data and logic come from the backend. The backend acts as the brain of the application.
+
+The process begins when the frontend sends a request to the backend using an API call. This request usually contains information such as the user identity, the action to be performed, or the data needed to display the screen. The backend first validates this request to ensure it is safe and authorized.
+
+After validation, the backend executes business logic. Business logic includes rules, calculations, and decisions specific to the application. For example, checking user permissions, calculating totals, or filtering records. The backend may communicate with databases or external services during this step.
+
+Once processing is complete, the backend prepares a response, usually in JSON format, and sends it back to the frontend. The frontend then updates the screen dynamically. The backend also handles security, scalability, caching, and performance to support many users simultaneously.
+
+=== PAGE BREAK ===
+
+PAGE 2
+HTTP and HTTPS
+
+HTTP stands for HyperText Transfer Protocol. It is the foundation of communication on the web. Whenever you type a website address or click a link, your browser sends an HTTP request to a server asking for resources such as web pages, images, or data.
+
+HTTP follows a request–response model. The browser sends a request, and the server sends a response. HTTP is stateless, which means the server does not automatically remember previous requests from the same user.
+
+HTTPS is the secure version of HTTP. It uses encryption through SSL or TLS to protect data while it travels over the network. This prevents attackers from reading or altering sensitive information.
+
+HTTPS also verifies the identity of websites and ensures data integrity. Because of these advantages, modern browsers warn users when websites do not use HTTPS. Today, HTTPS is essential for all secure and trusted web applications.
+
+=== PAGE BREAK ===
+
+PAGE 3
+DNS (Domain Name System)
+
+DNS is the system that helps users access websites using easy-to-remember names instead of numeric IP addresses. Computers communicate using IP addresses, but humans prefer domain names.
+
+When you enter a website address in your browser, the browser first checks whether it already knows the IP address. If not, it contacts a DNS resolver. The resolver searches through different DNS servers in a hierarchical order.
+
+This hierarchy includes root servers, top-level domain servers, and authoritative servers. Once the correct IP address is found, it is returned to the browser.
+
+The browser then connects to the server using the IP address and loads the website. DNS also uses caching to improve speed and reduce repeated lookups.
+
+=== PAGE BREAK ===
+
+PAGE 4
+Web Architecture
+
+Web architecture describes how a web application is designed and how its components interact. A well-structured architecture ensures performance, security, and scalability.
+
+The most common approach is the three-tier architecture. The frontend handles user interaction and display. The backend processes requests, applies logic, and controls access to data. The database stores data permanently.
+
+Modern web applications often use microservices, where different services handle different responsibilities. Cloud platforms, load balancers, and CDNs are used to improve availability and speed.
+
+Good web architecture allows applications to grow, handle more users, and remain stable without major redesigns.
+
+=== PAGE BREAK ===
+
+PAGE 5
+ARIA and WAI-ARIA
+
+ARIA stands for Accessible Rich Internet Applications. It is used to make web applications accessible to people with disabilities. WAI-ARIA is a standard created by the Web Accessibility Initiative.
+
+ARIA provides attributes that help assistive technologies such as screen readers understand web content. This is especially important for dynamic content built using JavaScript.
+
+Examples include aria-label to describe elements and aria-live to announce updates. ARIA should only be used when standard HTML elements are not sufficient.
+
+Proper use of WAI-ARIA ensures inclusivity and improves the experience for all users.
+
+=== PAGE BREAK ===
+
+PAGE 6
+How a Browser Works (Behind the Scenes)
+
+When a user enters a URL, the browser starts by resolving the domain name using DNS. Once the server’s IP address is found, the browser establishes a network connection.
+
+The browser sends an HTTP or HTTPS request to the server. The server responds with HTML, CSS, JavaScript, and other resources.
+
+The browser parses HTML to create the DOM, applies CSS for styling, and executes JavaScript. JavaScript may request additional data from the backend.
+
+Finally, the browser renders the content visually on the screen. This entire process usually happens in milliseconds.
+
+=== PAGE BREAK ===
+
+PAGE 7
+Smallest JavaScript File Executable on the Web
+
+JavaScript is a lightweight and flexible language. The smallest JavaScript file that can run in a browser can be completely empty.
+
+An empty file is valid JavaScript and does not produce any errors. Even a single semicolon is considered a valid JavaScript program.
+
+A minimal statement such as console.log("Hello"); is enough to demonstrate execution. This shows how easily JavaScript integrates with the browser.
+
+=== PAGE BREAK ===
+
+PAGE 8
+Arithmetic and Concatenation Operators in JavaScript
+
+JavaScript supports arithmetic operators such as addition, subtraction, multiplication, and division.
+
+The plus (+) operator behaves differently depending on the data types used. When both operands are numbers, it performs addition.
+
+When one operand is a string, it performs concatenation. For example, 5 + "5" results in "55".
+
+This behavior occurs due to JavaScript’s type coercion mechanism. Understanding this is essential to avoid logical errors.
+JAVASCRIPT CONTROL STATEMENTS – DETAILED EXPLANATION WITH OUTPUT
+===============================================================
+
+1. SWITCH STATEMENT
+------------------
+Code:
+let day = 3;
+switch(day) {
+  case 1: console.log("Monday"); break;
+  case 2: console.log("Tuesday"); break;
+  case 3: console.log("Wednesday"); break;
+  default: console.log("Invalid day");
+}
+
+Explanation:
+The value of variable 'day' is 3. The switch statement compares this value with each case.
+When it matches case 3, the corresponding statement is executed and break stops further checking.
+
+Output Explanation:
+Since day = 3 matches case 3, "Wednesday" is printed.
+
+Output:
+Wednesday
+
+
+2. IF-ELSE STATEMENT
+-------------------
+Code:
+let age = 20;
+if(age >= 18) {
+  console.log("Eligible to vote");
+} else {
+  console.log("Not eligible to vote");
+}
+
+Explanation:
+The condition checks whether age is greater than or equal to 18.
+
+Output Explanation:
+Age is 20, which satisfies the condition, so the if-block executes.
+
+Output:
+Eligible to vote
+
+
+3. NESTED IF-ELSE STATEMENT
+--------------------------
+Code:
+let marks = 85;
+if(marks >= 90) {
+  console.log("Grade A");
+} else if(marks >= 75) {
+  console.log("Grade B");
+} else {
+  console.log("Grade C");
+}
+
+Explanation:
+Multiple conditions are checked one by one until a true condition is found.
+
+Output Explanation:
+Marks are 85. It is not >= 90, but it is >= 75, so Grade B is printed.
+
+Output:
+Grade B
+
+
+4. WHILE LOOP (6 EXAMPLES)
+-------------------------
+
+Example 1:
+Code:
+let i = 1;
+while(i <= 3) {
+  console.log(i);
+  i++;
+}
+
+Explanation:
+The loop runs as long as i is less than or equal to 3.
+
+Output Explanation:
+i starts at 1 and increments after each loop until it becomes 4, so values 1, 2, and 3 are printed.
+
+Output:
+1 2 3
+
+
+Example 2:
+Code:
+let n = 5;
+while(n > 0) {
+  console.log(n);
+  n--;
+}
+
+Explanation:
+The loop runs while n is greater than 0.
+
+Output Explanation:
+n starts at 5 and decreases each time until it becomes 0, printing numbers from 5 to 1.
+
+Output:
+5 4 3 2 1
+
+
+Example 3:
+Code:
+let sum = 0, x = 1;
+while(x <= 5) {
+  sum += x;
+  x++;
+}
+
+Explanation:
+The loop adds numbers from 1 to 5.
+
+Output Explanation:
+The values 1+2+3+4+5 are added to sum, resulting in 15.
+
+Output:
+15
+
+
+Example 4:
+Code:
+let a = 2;
+while(a <= 10) {
+  console.log(a);
+  a += 2;
+}
+
+Explanation:
+The loop prints even numbers.
+
+Output Explanation:
+a starts at 2 and increases by 2 until it exceeds 10, printing even numbers.
+
+Output:
+2 4 6 8 10
+
+
+Example 5:
+Code:
+let str = "JS";
+let count = 0;
+while(count < str.length) {
+  console.log(str[count]);
+  count++;
+}
+
+Explanation:
+The loop iterates through each character of the string.
+
+Output Explanation:
+The string has two characters, so each character is printed separately.
+
+Output:
+J S
+
+
+Example 6:
+Code:
+let num = 1;
+while(num <= 1) {
+  console.log("Runs once");
+  num++;
+}
+
+Explanation:
+The condition is true only once.
+
+Output Explanation:
+The loop executes one time and then stops because num becomes 2.
+
+Output:
+Runs once
+
+
+5. DO-WHILE LOOP (6 EXAMPLES)
+----------------------------
+
+Example 1:
+Code:
+let i = 1;
+do {
+  console.log(i);
+  i++;
+} while(i <= 3);
+
+Explanation:
+The do-while loop executes at least once before checking the condition.
+
+Output Explanation:
+The loop prints numbers 1 to 3.
+
+Output:
+1 2 3
+
+
+Example 2:
+Code:
+let n = 5;
+do {
+  console.log(n);
+  n--;
+} while(n > 0);
+
+Explanation:
+The loop runs until n becomes 0.
+
+Output Explanation:
+Numbers from 5 down to 1 are printed.
+
+Output:
+5 4 3 2 1
+
+
+Example 3:
+Code:
+let x = 1, sum = 0;
+do {
+  sum += x;
+  x++;
+} while(x <= 5);
+
+Explanation:
+The loop calculates the sum of first five numbers.
+
+Output Explanation:
+1+2+3+4+5 results in 15.
+
+Output:
+15
+
+
+Example 4:
+Code:
+let a = 2;
+do {
+  console.log(a);
+  a += 2;
+} while(a <= 10);
+
+Explanation:
+Even numbers are printed using do-while.
+
+Output Explanation:
+Even numbers from 2 to 10 are displayed.
+
+Output:
+2 4 6 8 10
+
+
+Example 5:
+Code:
+let str = "OK";
+let i2 = 0;
+do {
+  console.log(str[i2]);
+  i2++;
+} while(i2 < str.length);
+
+Explanation:
+Characters of a string are printed.
+
+Output Explanation:
+Each character of the string is printed separately.
+
+Output:
+O K
+
+
+Example 6:
+Code:
+let num = 10;
+do {
+  console.log("Executes at least once");
+} while(num < 5);
+
+Explanation:
+Even though the condition is false, the loop runs once.
+
+Output Explanation:
+The message is printed once because do-while executes before checking the condition.
+
+Output:
+Executes at least once
+
+
+6. FOR LOOP
+-----------------------------------
+Code:
+for(let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+Explanation:
+The for loop initializes, checks condition, and increments in one line.
+
+Output Explanation:
+The loop runs from 1 to 5, printing each number.
+
+Output:
+1 2 3 4 5
+
+
+Working with Five Different Sets of Strings in JavaScript
+
+JavaScript strings are sequences of characters used to store and manipulate text. They are commonly used for names, messages, user input, and display content.
+
+In this section, we will work with five different string sets and understand how JavaScript processes them.
+
+String Set 1: Basic String Operations
+let str1 = "Hello";
+let str2 = "World";
+let result = str1 + " " + str2;
+console.log(result);
+
+
+Explanation:
+Here, two strings are combined using the + operator. A space is added between them to form a readable sentence. This is called string concatenation.
+
+Output:
+Hello World
+
+String Set 2: Length and Uppercase
+let text = "javascript";
+console.log(text.length);
+console.log(text.toUpperCase());
+
+
+Explanation:
+The length property counts the number of characters in a string.
+The toUpperCase() method converts all letters into capital letters.
+
+Output:
+10
+JAVASCRIPT
+
+String Set 3: Extracting a Substring
+let message = "Welcome to Coding";
+let part = message.substring(0, 7);
+console.log(part);
+
+
+Explanation:
+The substring() method extracts characters between two indexes.
+Here, it extracts characters from index 0 to 7 (not including 7).
+
+Output:
+Welcome
+
+String Set 4: Replacing Text
+let sentence = "I like Java";
+let newSentence = sentence.replace("Java", "JavaScript");
+console.log(newSentence);
+
+
+Explanation:
+The replace() method searches for a word and replaces it with another.
+Here, "Java" is replaced with "JavaScript".
+
+Output:
+I like JavaScript
+
+String Set 5: Splitting a String
+let data = "red,green,blue,yellow";
+let colors = data.split(",");
+console.log(colors);
+
+
+Explanation:
+The split() method breaks a string into an array based on a separator.
+Here, it splits the string wherever a comma appears.
+
+Output:
+["red", "green", "blue", "yellow"]
+
+=== PAGE BREAK ===
+
+PAGE 11
+Function Prototypes in JavaScript (Five Scenarios)
+
+In JavaScript, every function has a prototype property.
+The prototype is used to share properties and methods between all objects created from a constructor function.
+
+This avoids duplication and saves memory.
+
+Scenario 1: Adding a Method Using Prototype
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.sayHello = function() {
+  return "Hello, my name is " + this.name;
+};
+
+let p1 = new Person("Rahul");
+console.log(p1.sayHello());
+
+
+Explanation:
+The sayHello() method is added to the prototype.
+All objects created using Person can access this method.
+
+Output:
+Hello, my name is Rahul
+
+Scenario 2: Sharing a Property Using Prototype
+function Car(brand) {
+  this.brand = brand;
+}
+
+Car.prototype.wheels = 4;
+
+let c1 = new Car("Honda");
+let c2 = new Car("Toyota");
+
+console.log(c1.wheels);
+console.log(c2.wheels);
+
+
+Explanation:
+The wheels property is stored in the prototype.
+Both objects access the same shared property.
+
+Output:
+4
+4
+
+Scenario 3: Overriding a Prototype Property
+function Animal(type) {
+  this.type = type;
+}
+
+Animal.prototype.sound = "Generic Sound";
+
+let dog = new Animal("Dog");
+dog.sound = "Bark";
+
+console.log(dog.sound);
+
+
+Explanation:
+The object overrides the prototype property by defining its own.
+The local property is used instead of the prototype version.
+
+Output:
+Bark
+
+Scenario 4: Adding Prototype Method After Object Creation
+function User(username) {
+  this.username = username;
+}
+
+let u1 = new User("admin");
+
+User.prototype.getRole = function() {
+  return "User role: normal";
+};
+
+console.log(u1.getRole());
+
+
+Explanation:
+Even though the method is added after the object is created,
+JavaScript still allows access because of prototype chaining.
+
+Output:
+User role: normal
+
+Scenario 5: Checking Prototype Relationship
+function Book(title) {
+  this.title = title;
+}
+
+let b1 = new Book("JavaScript Basics");
+
+console.log(Book.prototype.isPrototypeOf(b1));
+
+
+Explanation:
+The isPrototypeOf() method checks whether an object exists in another object's prototype chain.
+
+Output:
+true
+
+Working with a Level-6 Nested Array in JavaScript
+(Using flat(), push(), pop(), and pull-like logic)
+
+In JavaScript, arrays can contain other arrays.
+When arrays are nested many levels deep, they become complex to handle.
+Here we create a level-6 nested array and work on it using four practical array operations.
+
+Step 1: Create a Level-6 Nested Array
+let deepArray = [1, [2, [3, [4, [5, [6, 7]]]]]];
+console.log(deepArray);
+
+
+Explanation:
+This array is nested six levels deep.
+Each element contains another array inside it.
+Such deep structures appear in JSON data, APIs, and tree-like data models.
+
+Method 1: flat() – Flatten the Entire Array
+let flatArray = deepArray.flat(6);
+console.log(flatArray);
+
+
+Explanation:
+The flat() method removes all nested arrays and returns a new flat array.
+The number 6 tells JavaScript how deep the flattening should go.
+
+Output:
+[1, 2, 3, 4, 5, 6, 7]
+
+Why useful:
+It converts complex nested data into a simple list that is easy to process.
+
+Method 2: push() – Add a New Value
+let numbers = deepArray.flat(6);
+numbers.push(8);
+console.log(numbers);
+
+
+Explanation:
+The push() method adds a new element to the end of the array.
+Here, we first flatten the deep array and then push the value 8.
+
+Output:
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+Why useful:
+It is commonly used to insert new items into arrays dynamically.
+
+Method 3: pop() – Remove the Last Value
+let numbers2 = deepArray.flat(6);
+let removedValue = numbers2.pop();
+console.log(numbers2);
+console.log(removedValue);
+
+
+Explanation:
+The pop() method removes the last element from the array.
+It also returns the removed value.
+
+Output:
+[1, 2, 3, 4, 5, 6]
+7
+
+Why useful:
+It is useful when implementing stacks, undo actions, or removing recent items.
+
+Method 4: pull() – Remove a Specific Value (Custom Logic)
+
+JavaScript does not have a built-in pull() method like some libraries.
+We can create a pull-like behavior using filter().
+
+let numbers3 = deepArray.flat(6);
+
+function pull(array, valueToRemove) {
+  return array.filter(item => item !== valueToRemove);
+}
+
+let result = pull(numbers3, 4);
+console.log(result);
+
+
+Explanation:
+The pull() function removes all occurrences of a specific value.
+Here, it removes the value 4 from the array.
+
+Output:
+[1, 2, 3, 5, 6, 7]
+
+Why useful:
+It helps delete specific unwanted values from arrays.
+
+12. DOM Tree (Document Object Model)
+    --------------------------------
+The DOM Tree stands for Document Object Model Tree. When a web browser loads an HTML document, it converts the document into a tree-like structure known as the DOM Tree. This structure represents all the HTML elements as nodes, arranged in a hierarchical order.
+
+The document is the root of the DOM Tree. Under the document comes the html element, which further contains head and body elements. Inside these elements are other tags such as headings, paragraphs, images, and links. Each element, attribute, and text in the HTML page becomes a node in the DOM Tree.
+
+The DOM Tree allows JavaScript to access, modify, add, or remove elements from the web page dynamically. Because of the DOM Tree, web pages can respond to user actions such as button clicks, form submissions, and mouse movements.
+
+Example:
+
+For a simple HTML page, the browser creates a DOM Tree structure where elements have parent, child, and sibling relationships, similar to a family tree.
+
+Importance of DOM Tree
+
+It represents the structure of a web page
+
+It allows dynamic interaction using JavaScript
+
+It helps in updating content without reloading the page
+
+It makes web pages interactive and responsive
+
+Definition:
+
+DOM Tree is a hierarchical representation of an HTML document created by the browser, which enables programming languages like JavaScript to manipulate web page content and structure.
+
+Important DOM terms
+
+Parent → Element that contains another element
+
+Child → Element inside another element
+
+Sibling → Elements at the same level
+
+Root → Top node (document)
+
+Example HTML:
+
+<html>
+  <body>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+  </body>
+</html>
+
+DOM Tree for this HTML:
+
+Document
+ └── html
+     └── body
+         ├── h1
+         │   └── "Hello"
+         └── p
+             └── "Welcome"
+
+
+1) Creating Arrays in All Ways & Working Them Through All Loops
+
+In JavaScript, arrays can be created in multiple ways. Arrays store multiple values in a single variable and are heavily used in real applications.
+
+Method 1: Array Literal
+let arr1 = [10, 20, 30, 40];
+
+
+This is the most common and recommended way.
+
+Method 2: Using new Array()
+let arr2 = new Array(1, 2, 3);
+
+
+Creates an array using the constructor.
+
+Method 3: Empty Array and Push
+let arr3 = [];
+arr3.push(5, 6, 7);
+
+
+Useful when data comes dynamically.
+
+Method 4: Array.of()
+let arr4 = Array.of(9, 8, 7);
+
+
+Safely creates arrays from values.
+
+Method 5: Array.from()
+let arr5 = Array.from("HELLO");
+
+
+Creates array from iterable objects.
+
+Looping Through Arrays
+for loop
+for (let i = 0; i < arr1.length; i++) {
+  console.log(arr1[i]);
+}
+
+for…of loop
+for (let value of arr1) {
+  console.log(value);
+}
+
+for…in loop
+for (let index in arr1) {
+  console.log(arr1[index]);
+}
+
+while loop
+let i = 0;
+while (i < arr1.length) {
+  console.log(arr1[i]);
+  i++;
+}
+
+do…while loop
+let j = 0;
+do {
+  console.log(arr1[j]);
+  j++;
+} while (j < arr1.length);
+
+
+Each loop serves different purposes depending on readability and control needs.
+
+=== PAGE BREAK ===
+
+PAGE 14
+2) Exploring map(), forEach(), filter(), sort() (Reader Friendly)
+
+These methods are used to process arrays cleanly and efficiently.
+
+map() – Transform Data
+let nums = [1, 2, 3];
+let doubled = nums.map(n => n * 2);
+
+
+Explanation:
+Creates a new array by modifying each element.
+
+Output:
+[2, 4, 6]
+
+forEach() – Perform Action
+nums.forEach(n => console.log(n));
+
+
+Explanation:
+Executes a function for each element.
+Does not return a new array.
+
+filter() – Select Data
+let even = nums.filter(n => n % 2 === 0);
+
+
+Explanation:
+Returns elements that match a condition.
+
+Output:
+[2]
+
+sort() – Arrange Data
+let values = [40, 10, 100, 20];
+values.sort((a, b) => a - b);
+
+
+Explanation:
+Sorts numbers correctly using a compare function.
+
+Output:
+[10, 20, 40, 100]
+
+Quick Reader Summary
+
+map() → modify values
+
+forEach() → run logic
+
+filter() → remove unwanted
+
+sort() → arrange data
+
+=== PAGE BREAK ===
+
+PAGE 15
+3) Complete DOM Manipulation (Clear & Practical)
+
+DOM (Document Object Model) allows JavaScript to interact with HTML elements.
+
+Selecting Elements
+document.getElementById("title");
+document.querySelector(".box");
+document.querySelectorAll("p");
+
+Changing Content
+element.innerText = "New Text";
+element.innerHTML = "<b>Bold</b>";
+
+Changing Styles
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+
+Creating & Adding Elements
+let div = document.createElement("div");
+div.innerText = "Hello DOM";
+document.body.appendChild(div);
+
+Removing Elements
+element.remove();
+
+
+DOM manipulation allows dynamic UI updates without reloading the page.
+
+=== PAGE BREAK ===
+
+PAGE 16
+4) Events: Keyboard & Mouse (With Event Properties)
+
+Events allow JavaScript to respond to user actions.
+
+Mouse Events
+button.addEventListener("click", (event) => {
+  console.log(event.type);
+  console.log(event.target);
+});
+
+
+Common Mouse Events:
+click, dblclick, mouseover, mouseout, mousemove
+
+Keyboard Events
+input.addEventListener("keydown", (event) => {
+  console.log(event.key);
+  console.log(event.code);
+});
+
+
+Key Event Properties:
+
+event.key → actual key pressed
+
+event.code → physical key
+
+event.altKey, event.ctrlKey, event.shiftKey
+
+Example: Detect Enter Key
+if (event.key === "Enter") {
+  console.log("Enter pressed");
+}
+
+
+Events make applications interactive and responsive.
+
+=== PAGE BREAK ===
+
+PAGE 17
+5) Exploring npm and npx (Beginner Friendly)
+What is npm?
+
+npm (Node Package Manager) is used to install and manage JavaScript libraries.
+
+npm init
+npm install axios
+
+
+It creates:
+
+node_modules → installed packages
+
+package.json → project info
+
+What is npx?
+
+npx runs packages without installing them globally.
+
+npx create-react-app myApp
+
+
+No global install required.
+
+Difference Between npm & npx
+npm			npx
+Installs packages	Runs packages
+Stored locally		Temporary execution
+Needs cleanup		No leftovers
+
+
+1) Architecture of V8 Engine (JavaScript Engine)
+
+The V8 engine is the JavaScript engine developed by Google and used in Google Chrome and Node.js. Its job is to execute JavaScript code efficiently and quickly. Whenever JavaScript runs in the browser or in Node.js, the V8 engine converts the code into machine instructions that the computer understands.
+
+The V8 engine works mainly in two stages: parsing and execution. First, JavaScript source code is parsed and converted into an Abstract Syntax Tree (AST). The AST represents the structure of the code. After parsing, the interpreter generates bytecode, which is an intermediate format.
+
+Then the TurboFan compiler optimizes frequently executed code and converts it into highly optimized machine code. This process is called Just-In-Time (JIT) compilation. Frequently used functions are optimized for performance.
+
+V8 also includes memory management and garbage collection. Garbage collection automatically removes unused memory objects so applications do not consume unnecessary memory.
+
+Major components of V8 include:
+
+• Parser – Converts code into AST
+• Ignition Interpreter – Converts AST to bytecode
+• TurboFan Compiler – Optimizes hot code
+• Garbage Collector – Manages memory
+
+This architecture helps JavaScript run very fast in modern applications.
+
+=== PAGE BREAK ===
+
+PAGE 19
+2) How Asynchronous Programming Works in JavaScript
+
+JavaScript runs on a single thread, meaning it executes one task at a time. However, web applications need to perform tasks like API calls, file loading, or timers without freezing the screen. This is achieved using asynchronous programming.
+
+JavaScript uses the Event Loop mechanism along with the Call Stack, Web APIs, Callback Queue, and Microtask Queue.
+
+When synchronous code runs, functions are pushed into the Call Stack and executed. If an asynchronous operation like setTimeout or fetch is called, the browser handles it using Web APIs. Once completed, the callback is placed in the callback queue.
+
+The Event Loop constantly checks whether the Call Stack is empty. When empty, it moves tasks from queues to the stack for execution.
+
+Promises and async/await use the microtask queue, which runs before the normal callback queue, making them faster.
+
+Example:
+
+console.log("Start");
+
+setTimeout(() => console.log("Timer"), 0);
+
+console.log("End");
+
+
+Output:
+Start
+End
+Timer
+
+Even with zero delay, the timer executes last due to asynchronous handling.
+
+This system allows JavaScript to handle multiple operations smoothly without blocking execution.
+
+=== PAGE BREAK ===
+
+PAGE 20
+3) Difference Between Spread and Rest Operator with Use Cases
+
+The spread operator (...) and rest operator look the same but work differently depending on where they are used.
+
+Spread Operator
+
+The spread operator expands elements of arrays or objects into individual values.
+
+Example: Copying an array
+
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1];
+
+
+Example: Merging arrays
+
+let a = [1, 2];
+let b = [3, 4];
+let result = [...a, ...b];
+
+
+Example: Copying objects
+
+let user = {name: "Sam"};
+let copy = {...user};
+
+
+Spread is useful when combining or copying data without modifying originals.
+
+Rest Operator
+
+The rest operator collects multiple elements into a single array or object.
+
+Example in function parameters:
+
+function sum(...numbers) {
+  return numbers.reduce((a, b) => a + b);
+}
+
+
+Example in destructuring:
+
+let [first, ...others] = [10, 20, 30];
+
+
+Here, others becomes [20, 30].
+
+Key Difference
+
+Spread → Expands values
+Rest → Collects values
+
+Real Use Case Comparison
+
+Spread:
+
+let updated = [...oldArray, newItem];
+
+
+Rest:
+
+function logger(first, ...rest) {
+  console.log(rest);
+}
