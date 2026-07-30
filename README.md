@@ -1,7 +1,7 @@
 # 💼 My Portfolio Website
 
 🌐 Live Demo:
-https://beautiful-piroshki-418340.netlify.app/
+https://fluffy-sprinkles-7714eb.netlify.app
 
 React Portfolio (Netlify – Main Project):  
 👉 https://react-portfolio-abhirami.netlify.app
